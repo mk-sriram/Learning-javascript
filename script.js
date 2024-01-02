@@ -77,18 +77,20 @@
 
 // array[0]
 
-//CLOSURES 
-function makeMultiplier(multiplier){
-return (
-    function (x){
-        return multiplier * x; 
-    }
-); 
-}
+// //CLOSURES 
+// function makeMultiplier(multiplier){
+// return (
+//     function (x){
+//         return multiplier * x; 
+//     }
+// ); 
+// }
 
-var doubleALL = makeMultiplier(2);
-console.long(doubleALL(10)) // here the first return statement , returns the 
-//entire function to varaible double ALL, so basically , doubleALL becomes its own function 
-//but the value of multiplier  remains within the function and then when the second DoubleALL function looks for it , it searches within the main function to find it 
+// var doubleALL = makeMultiplier(2);
+// console.long(doubleALL(10)) // here the first return statement , returns the 
+// //entire function to varaible double ALL, so basically , doubleALL becomes its own function 
+// //but the value of multiplier  remains within the function and then when the second DoubleALL function looks for it , it searches within the main function to find it 
+
+
 
 

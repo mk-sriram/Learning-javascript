@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image_test{
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <button  onclick="
+       testfunction()
+       " class="first_button"> <img src="test-1.png" alt="image" class="image_test"></button>
+</body>
+
+<script> 
+function testfunction(){
+    const buttonElemet = document.querySelector('.first_button'); // the . is important for class identification 
+
+        if ( buttonElemet.innerText === 'Subscribe'){
+        buttonElemet.innerHTML = 'Subscribed';
+        buttonElemet.classList.add('is-subscribed') //add CSS to make it look different 
+         } else {
+        buttonElemet.innerHTML = 'Subscribe'; 
+        buttonElemet.classList.remove('is-subscribed') //removes the class, so the CSS gets removed 
+        }
+}
+
+
+</script>
+</html>
