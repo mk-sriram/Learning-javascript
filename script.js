@@ -94,3 +94,58 @@
 
 
 
+
+// const myArray = ["eat","sleep","code"]
+
+// const myObject = { 
+//     name: "Dave", 
+//     hobbies: ["eat","sleep","code"],
+//     logName: function() { 
+//         console.log(this.name); 
+//     }
+
+
+// }; 
+// localStorage.setItem("myLocal", JSON.stringify(myArray)); 
+// const key = localStorage.getItem();
+
+// const myLocalData = JSON.parse('myLocal');
+// console.log(myLocalData)
+// sessionStorage.setItem("YaYeet", JSON.stringify(myObject)); 
+const jokeObject = {
+    id: "nrz5oWnyPuc",
+    joke: "What did the doctor say to the gingerbread man who broke his leg? Try icing it.",
+  }
+
+const getDadjoke = async () => { 
+    const response = await fetch("https://icanhazdadjoke.com/", {
+            
+        method: "GET", 
+            headers: { 
+                Accept: "application/json"
+            }
+    });
+    const jsonJokeData = await response.json(); 
+
+    console.log(jsonJokeData); 
+
+} 
+
+const postDadjoke = async (jokeObj) => { 
+
+    const response = await fetch("https://httpbin.org/post", {
+        method: "POST", 
+        headers: { 
+                "Content-type": "application/json"
+            }, 
+        body: JSON.stringify(jokeObj)
+    });
+    const jsonResponse = await response.json(); 
+
+    console.log(jsonResponse); 
+
+} 
+
+getDadjoke();
+
+postDadjoke(jokeObject)
